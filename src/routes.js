@@ -8,6 +8,10 @@ const routes = express.Router()
 const BoxController = require('../src/controllers/BoxController')
 const FileController = require('../src/controllers/FileController')
 
+routes.get('/', (req, res) => {
+  return res.send('Welcome to Omnistack application')
+})
+
 routes.post('/boxes', BoxController.store)
 routes.get('/boxes/:id', BoxController.show)
 
