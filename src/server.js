@@ -7,7 +7,7 @@ const app = express()
 const server = require('http').Server(app)
 
 const dotenv = require('dotenv')
-dotenv.config()
+dotenv.config({ silent: process.env.NODE_ENV === 'production' })
 
 const io = require('socket.io')(server)
 
