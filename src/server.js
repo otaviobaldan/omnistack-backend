@@ -6,9 +6,6 @@ const cors = require('cors')
 const app = express()
 const server = require('http').Server(app)
 
-const dotenv = require('dotenv')
-dotenv.config({ silent: process.env.NODE_ENV === 'production' })
-
 const io = require('socket.io')(server)
 
 // isola os usuarios de acordo com a box que estão acessando para que recebam atualizações somente daquela box
